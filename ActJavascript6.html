@@ -6,7 +6,7 @@
 
 <font face="Sans-Serif">
 <p>&nbsp;</p>
-<h1><P align="center">Activitat 5 Javascript</P></h1>
+<h1><P align="center">Teorema de Pitágoras</P></h1>
 </font>
     
 </HEAD>
@@ -20,8 +20,8 @@
 <p>Catet A--><input type="text" id="a"/></p><br>
 <p>Catet B--><input type="text" id="b"/></p><br>
 <p>Hipotenusa--><input type="text" id="c"/></p><br>
- <button type="button" onclick="teorema()">Trobar el valor del catet/hipotenusa</button>
-<br><p>El costat que falta és: <span id="escrit"></span></p>
+ <button type="button" onclick="teorema()">Encuentra el valor restante</button>
+<br><p>El costat que falta és: <span id="escrito"></span></p>
 
 <script>
 
@@ -30,21 +30,21 @@ function teorema() {
   var a = parseFloat(document.getElementById("a").value);
   var b = parseFloat(document.getElementById("b").value);
   var c = parseFloat(document.getElementById("c").value);
-  var escrit = document.getElementById("escrit");
+  var escrito = document.getElementById("escrito");
 
   if (Number.isNaN(a) && !Number.isNaN(b) && !Number.isNaN(c)) {
     let a = Math.sqrt(c ** 2 - b ** 2);
-    escrit.textContent = ' ' + a;
+    escrito.textContent = ' ' + a;
   }
 
   if (Number.isNaN(b) && !Number.isNaN(a) && !Number.isNaN(c)) {
     let b = Math.sqrt(c ** 2 - a ** 2);
-    escrit.textContent = ' ' + b;
+    escrito.textContent = ' ' + b;
   }
 
   if (Number.isNaN(c) && !Number.isNaN(a) && !Number.isNaN(b)) {
     let c = Math.sqrt(a ** 2 + b ** 2);
-    escrit.textContent = ' ' + c;
+    escrito.textContent = ' ' + c;
   }
 }
 </script>
